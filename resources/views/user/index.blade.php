@@ -155,7 +155,7 @@
                 <div class="single-promo promo4">
                     <i class="fa fa-gift"></i>
                     <img style="height: 100px;width: 90px" src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}" alt="">
-                    <p>Sản phẩm mới</p>
+                    <p>Sản phẩm/Game mới</p>
                 </div>
             </div>
         </div>
@@ -168,7 +168,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="latest-product">
-                    <h2 class="section-title">Danh sách mua bán</h2>
+                    <h2 style="color: orangered" class="section-title">Danh sách mua bán</h2>
                     <form action="{{route('products.search')}}" method="get">
                         @csrf
                         <input type="text" placeholder="Search" name="keyword">
