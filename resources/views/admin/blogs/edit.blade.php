@@ -18,9 +18,9 @@
 
                 <div class="form-group">
 
-                    <label>Tên sản phẩm:</label>
+                    <label>Tiêu đề:</label>
 
-                    <input type="text" class="form-control" name="name" value="{{ $blog->title }}" required>
+                    <input type="text" class="form-control" name="title" value="{{ $blog->title }}" required>
 
                 </div>
 
@@ -28,36 +28,65 @@
 
                     <label>Game</label>
 
-                    <input  type="text"  class="form-control" rows="3" name="price" value=" {{ $blog->price }}" required>
+                    <input  type="text"  class="form-control" rows="3" name="price" value=" {{ $blog->game }}" required>
 
                 </div>
                 <div class="form-group">
 
-                    <label>Giá cũ</label>
 
-                    <input  type="text" class="form-control" rows="3" name="old_price" required value="{{ $product->old_price }} " >
+                    <div class="form-group">
 
-                </div>
+                        <label>Ảnh bìa</label>
+
+                        <input type="file" name="headImage" class="form-control-file" >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Ảnh 1:</label>
+
+                        <input type="file" name="image1" class="form-control-file" >
+
+                    </div>
+                    <div class="form-group">
+
+                        <label>Nội dung</label>
+
+                        <textarea class="form-control" rows="3" name="content"  required> {{$blog->content}}</textarea>
+
+                    </div>
+
+
                 <div class="form-group">
 
-                    <label>Thông tin chi tiết</label>
+                    <label>Ảnh 2:</label>
 
-                    <textarea class="form-control" rows="3" name="detail" value=" {{ $product->detail }} "  required> </textarea>
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>Image</label>
-
-                    <input type="file" name="image" class="form-control-file" >
+                    <input type="file" name="image2" class="form-control-file" >
 
                 </div>
 
-                <button type="submit" class="btn btn-primary">Confirm Edit</button>
+                    <div class="form-group">
+
+                        <label>Ảnh 3:</label>
+
+                        <input type="file" name="image3" class="form-control-file" >
+
+                    </div>
+                    <div class="form-group">
+
+                        <label>Kết bài:</label>
+
+                        <textarea class="form-control" rows="3" name="lastWord"  required> {{$blog->lastWord}}</textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Confirm Edit</button>
 
                 <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
-
+                </div>
             </form>
 
         </div>

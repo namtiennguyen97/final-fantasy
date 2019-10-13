@@ -30,7 +30,7 @@ Route::group(['prefix'=>'blogs'], function (){
    Route::get('/','BlogController@index')->name('blogs.index');
    Route::get('/create','BlogController@create')->name('blogs.create');
    Route::post('/create','BlogController@store')->name('blogs.store');
-   Route::get('/{id}/edit','BLogController@edit')->name('blogs.edit');
+   Route::get('/{id}/edit','BlogController@edit')->name('blogs.edit');
    Route::post('/{id}/update','BlogController@update')->name('blogs.update');
    Route::get('/{id}/destroy','BlogController@destroy')->name('blogs.destroy');
 //    Route::get('/page', 'BlogController@userBlog');

@@ -148,7 +148,7 @@
         <div class="row">
             <div class="col-xl-9 col-lg-8 col-md-7">
                 <div class="section-title text-white">
-                    <h2>Latest News</h2>
+                    <h2>Thông tin mới nhất:</h2>
                 </div>
                 <ul class="blog-filter">
                     <li><a href="#">Racing</a></li>
@@ -164,13 +164,14 @@
                 @foreach($blog as $key => $value)
                 <div class="blog-item">
                     <div class="blog-thumb">
-                        <img src="{{asset("storage/".$value->headImage)}}" style="width: 400px;height: 390px">
+                        <img src="{{asset("storage/".$value->headImage)}}" style="width: 280px;height: 290px">
                     </div>
                     <div class="blog-text text-box text-white">
                         <div class="top-meta">Đã tạo: {{$value->created_at}} <a href="">Games</a></div>
-                        <h3>The best online game is out now!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius-mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consecte-tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-                        <a href="#" class="read-more">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+                        <h3>{{$value->title}}</h3>
+                        <a>Game: {{$value->game}}</a>
+                        <p>read more</p>
+                        <a href="#" class="read-more">Xem chi tiết  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
                     </div>
                 </div>
                 @endforeach
