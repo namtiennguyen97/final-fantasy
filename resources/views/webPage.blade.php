@@ -171,11 +171,14 @@
                         <h3>{{$value->title}}</h3>
                         <a>Game: {{$value->game}}</a><br>
                         <a href="#" class="read-more">Xem chi tiết  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+
                     </div>
                 </div>
                 @endforeach
+
 <br>
                 {{$blog->links()}}
+
             </div>
             <div class="col-xl-3 col-lg-4 col-md-5 sidebar">
                 <div id="stickySidebar">
@@ -222,14 +225,13 @@
                     </div>
                     <div class="widget-item">
                         <div class="categories-widget">
-                            <h4 class="widget-title">categories</h4>
+                            <h4 class="widget-title">Danh mục:</h4>
                             <ul>
                                 <li><a href="">Games</a></li>
-                                <li><a href="">Gaming Tips & Tricks</a></li>
-                                <li><a href="">Online Games</a></li>
-                                <li><a href="">Team Games</a></li>
+                                <li><a href="">Sản phẩm</a></li>
+                                <li><a href="">Phụ kiện</a></li>
+                                <li><a href="">Tin tức</a></li>
                                 <li><a href="">Community</a></li>
-                                <li><a href="">Uncategorized</a></li>
                             </ul>
                         </div>
                     </div>
@@ -248,7 +250,7 @@
 
 <!-- Intro section -->
 <section class="intro-video-section set-bg d-flex align-items-end " data-setbg="{{asset('HTML/img/promo-bg.jpg')}}">
-    <a href="https://www.youtube.com/watch?v=uFsGy5x_fyQ" class="video-play-btn video-popup"><img src="{{asset('HTML/img/icons/solid-right-arrow.png')}}" alt="#"></a>
+    <a href="https://www.youtube.com/watch?v=NK9F1zwBNug" class="video-play-btn video-popup"><img src="{{asset('HTML/img/icons/solid-right-arrow.png')}}" alt="#"></a>
     <div class="container">
         <div class="video-text">
             <h2>Trải nghiệm đồ họa game trên PS4 Pro</h2>
@@ -261,13 +263,13 @@
 
 <!-- Featured section -->
 <section class="featured-section">
-    <div class="featured-bg set-bg" data-setbg="{{asset('HTML/img/featured-bg.jpg')}}"></div>
+    <div class="featured-bg set-bg" data-setbg="{{asset('HTML/img/horizon.gif')}}"></div>
     <div class="featured-box">
         <div class="text-box">
-            <div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
-            <h3>The game you’ve been waiting  for is out now</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquamet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum posuere porttitor justo id pellentesque. Proin id lacus feugiat, posuere erat sit amet, commodo ipsum. Donec pellentesque vestibulum metus...</p>
-            <a href="#" class="read-more">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+            <div class="top-meta">10-10 /  in <a href="">Games</a></div>
+            <h3>Sở hữu ngay đĩa game và hệ Ps4 mới nhất!</h3>
+            <p>Thế giới game rộng mở đang chờ bạn khám phá, chỉ với một lần bấm, bạn sẽ có thể sở hữu cho mình sản phẩm chính hãng và được tặng kèm một đĩa Horizon:Hero Dawn miễn phí!</p>
+            <a href="#" class="read-more">Mua ngay!  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
         </div>
     </div>
 </section>
@@ -278,10 +280,10 @@
 <!-- Newsletter section -->
 <section class="newsletter-section">
     <div class="container">
-        <h2>Subscribe to our newsletter</h2>
+        <h2>Đăng kí để nhận những sản phẩm mới nhất</h2>
         <form class="newsletter-form">
             <input type="text" placeholder="ENTER YOUR E-MAIL">
-            <button class="site-btn">subscribe  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></button>
+            <button class="site-btn">Đăng kí  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></button>
         </form>
     </div>
 </section>
@@ -315,7 +317,7 @@
             <a href="#"><i class="fa fa-dribbble"></i></a>
             <a href="#"><i class="fa fa-behance"></i></a>
         </div>
-        <div class="copyright"><a href="">Colorlib</a> 2018 @ All rights reserved</div>
+        <div class="copyright"><a href="">Gaming Ps4</a> 2019 @ All rights reserved Nam Nguyen</div>
     </div>
 </footer>
 <!-- Footer section end -->
