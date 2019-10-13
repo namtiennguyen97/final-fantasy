@@ -129,4 +129,21 @@ class ProductController extends Controller
         Session::flash('success','Xóa thành công');
         return redirect()->route('products.index');
     }
+
+    public function search(Request $request){
+        $keyword = $request->input('keyword');
+        if (!$keyword){
+            return redirect()->route('products.index');
+        }
+        $product = Product::where('name','LIKE','%'.$keyword.'%')->paginate(5);
+        return view('user.index',compact('product'));
+    }
+    public  function selectAll(Request $request){
+        $keyword = $request->input('keyword');
+        if (!$keyword){
+            return redirect()->route('products.index');
+        }
+        $product = Product::table('products')->select('name','price','old_price','detail','image')->get();
+        return view('user.index',compact('product'));
+    }
 }

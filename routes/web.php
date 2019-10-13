@@ -12,7 +12,10 @@
 */
 
 
+use Illuminate\Support\Facades\Route;
+
 Route::group(['prefix'=>'products'], function (){
+    Route::get('/search','ProductController@search')->name('products.search');
    Route::get('/user','ProductController@userHome')->name('user.index') ;
    Route::get('/','ProductController@index')->name('products.index');
    Route::get('/create','ProductController@create')->name('products.create');

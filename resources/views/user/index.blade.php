@@ -36,14 +36,12 @@
 </head>
 <body>
 
-
-
 <div class="site-branding-area">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="./"><img src="{{asset('ustora/img/logo.png')}}"></a></h1>
+                    <h1><a href="{{route('webPage')}}"><img src="{{asset('ustora/img/ps4-lodddgo.png')}}" style="width: 90px;height: 40px"></a></h1>
                 </div>
             </div>
 
@@ -69,8 +67,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop page</a></li>
+                    <li class="active"><a href="{{route('webPage')}}">Home</a></li>
+                    <li><a href="{{route('user.index')}}">Shop page</a></li>
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="#">Category</a></li>
                     <li><a href="#">Contact</a></li>
@@ -97,10 +95,10 @@
             <li><img src="{{asset('ustora/img/nier2.jpg')}}" alt="Slide">
                 <div class="caption-group">
                     <h2 class="caption title">
-                         <span class="primary" style="color: darkred">Nier Automata giảm gia 50% <strong>+ </strong></span>
+                         <span class="primary" style="color: darkred">Nier Automata giảm giá 50% <strong>+ </strong></span>
                     </h2>
                     <h4 class="caption subtitle">Bản edittion</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Mua ng</a>
+                    <a class="caption button-radius" href="#"><span class="icon"></span>Mua ngay</a>
                 </div>
             </li>
             <li><img src="{{asset('ustora/img/god1.jpg')}}" alt="Slide">
@@ -109,7 +107,7 @@
                          <span class="primary">DLC <strong>God Of War IX</strong></span>
                     </h2>
                     <h4 class="caption subtitle">Select Item</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Mua ng</a>
+                    <a class="caption button-radius" href="#"><span class="icon"></span>Mua ngay</a>
                 </div>
             </li>
             <li><img src="{{asset('ustora/img/nier4.jpg')}}" alt="Slide">
@@ -121,15 +119,7 @@
                     <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
                 </div>
             </li>
-            <li><img src="{{asset('ustora/img/ps41.jpeg')}}" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        Sony <span class="primary">PS4 <strong>Slime</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">& Disk</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
+
 
         </ul>
     </div>
@@ -144,28 +134,28 @@
                 <div class="single-promo promo1">
                     <i class="fa fa-refresh"></i>
                     <img src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}" alt="">
-                    <p>30 Days return</p>
+                    <p>Bảo hành 2 tháng!</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo2">
                     <i class="fa fa-truck"></i>
                     <img src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}"  alt="">
-                    <p>Free shipping</p>
+                    <p>Miễn phí ship</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo3">
                     <i class="fa fa-lock"></i>
                     <img src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}"  alt="">
-                    <p>Secure payments</p>
+                    <p>Bảo mật mua Online</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo4">
                     <i class="fa fa-gift"></i>
                     <img src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}" alt="">
-                    <p>New products</p>
+                    <p>Sản phẩm mới</p>
                 </div>
             </div>
         </div>
@@ -179,6 +169,11 @@
             <div class="col-md-12">
                 <div class="latest-product">
                     <h2 class="section-title">Danh sách mua bán</h2>
+                    <form action="{{route('products.search')}}" method="get">
+                        @csrf
+                        <input type="text" placeholder="Search" name="keyword">
+                        <input type="submit" value="Search">
+                    </form>
                     <div class="product-carousel">
                         @foreach($product as $key => $value)
                         <div class="single-product">
@@ -234,51 +229,39 @@
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="footer-about-us">
-                    <h2>u<span>Stora</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                    <h2>Gaming<span>Ps4</span></h2>
+                    <p>Bảo mật, an toàn, thông tin chính xác. Mọi liên hệ gửi đến anh Luân Codygym để được nghe "Chết rồi Chết rồi!".</p>
                     <div class="footer-social">
-                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="facebook.com.vn" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+                        <a href="pornhub.com" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-menu">
-                    <h2 class="footer-wid-title">User Navigation </h2>
-                    <ul>
-                        <li><a href="#">My account</a></li>
-                        <li><a href="#">Order history</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="#">Vendor contact</a></li>
-                        <li><a href="#">Front page</a></li>
-                    </ul>
-                </div>
-            </div>
+{{--            <div class="col-md-3 col-sm-6">--}}
+{{--                <div class="footer-menu">--}}
+{{--                    <h2 class="footer-wid-title">User Navigation </h2>--}}
+{{--                    <ul>--}}
+{{--                        <li><a href="#">My account</a></li>--}}
+{{--                        <li><a href="#">Order history</a></li>--}}
+{{--                        <li><a href="#">Wishlist</a></li>--}}
+{{--                        <li><a href="#">Vendor contact</a></li>--}}
+{{--                        <li><a href="#">Front page</a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-menu">
-                    <h2 class="footer-wid-title">Categories</h2>
-                    <ul>
-                        <li><a href="#">Mobile Phone</a></li>
-                        <li><a href="#">Home accesseries</a></li>
-                        <li><a href="#">LED TV</a></li>
-                        <li><a href="#">Computer</a></li>
-                        <li><a href="#">Gadets</a></li>
-                    </ul>
-                </div>
-            </div>
 
             <div class="col-md-3 col-sm-6">
                 <div class="footer-newsletter">
-                    <h2 class="footer-wid-title">Newsletter</h2>
-                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                    <h2 class="footer-wid-title">Góp ý</h2>
+                    <p>Nhập gmail để gửi báo cáo về admin- namtien10101997@gmail.com</p>
                     <div class="newsletter-form">
                         <form action="#">
-                            <input type="email" placeholder="Type your email">
-                            <input type="submit" value="Subscribe">
+                            <input type="email" placeholder="Điền Gmail">
+                            <input type="submit" value="Send">
                         </form>
                     </div>
                 </div>
@@ -292,7 +275,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright">
-                    <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                    <p>&copy; 2019-CodyGym Casestudy <a href="gmail.com" target="_blank">toilanam97@gmail.com</a></p>
                 </div>
             </div>
 

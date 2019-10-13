@@ -28,8 +28,8 @@
                     <textarea  class="form-control" name="detail" ></textarea>
                 </div>
                 <div class="form-group">
-
-                    <label for="exampleFormControlFile1">Image</label>
+ìa
+                    <label for="exampleFormControlFile1">Ảnh bia</label>
 
                     <input type="file" name="image" class="form-control-file">
 

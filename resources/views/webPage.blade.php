@@ -343,6 +343,7 @@
 
 
 <!-- Footer section -->
+@yield('footer')
 <footer class="footer-section">
     <div class="container">
         <div class="footer-left-pic">
