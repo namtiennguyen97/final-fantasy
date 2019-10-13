@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <title>EndGam - Gaming Magazine Template</title>
+    <title>Gaming Ps4</title>
     <meta charset="UTF-8">
     <meta name="description" content="EndGam Gaming Magazine Template">
     <meta name="keywords" content="endGam,gGaming, magazine, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link href="{{asset('HTML/img/favicon.ico')}}" rel="shortcut icon"/>
+    <link href="{{asset('HTML/img/2bchibi.ico')}}" rel="shortcut icon"/>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -51,59 +51,21 @@
         <div class="header-bar-warp d-flex">
             <!-- site logo -->
             <a href="home.html" class="site-logo">
-                <img src="{{asset('HTML/img/logo.png')}}" alt=""> <!-- ./ -->
+                <img src="{{asset('HTML/img/headee.png')}}" alt="" style="width: 100px;height: 39px"> <!-- ./ -->
             </a>
             <nav class="top-nav-area w-100">
                 <div class="user-panel">
 
-{{--                    @yield('content')--}}
-{{--                    @guest--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>--}}
-{{--                        </li>--}}
-{{--                        @if (Route::has('register'))--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
-{{--                            </li>--}}
-{{--                        @endif--}}
-{{--                    @else--}}
-{{--                        <li class="nav-item dropdown">--}}
-{{--                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
-{{--                                {{ Auth::user()->name }} <span class="caret"></span>--}}
-{{--                            </a>--}}
-
-{{--                            <div class="sub-menu" aria-labelledby="navbarDropdown">--}}
-{{--                                <a class="dropdown-item" href="{{ route('logout') }}"--}}
-{{--                                   onclick="event.preventDefault();--}}
-{{--                                                     document.getElementById('logout-form').submit();">--}}
-{{--                                    {{ __('Logout') }}--}}
-{{--                                </a>--}}
-
-{{--                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-{{--                                    @csrf--}}
-{{--                                </form>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
-{{--                    @endguest--}}
-
-
-
-                    {{--                    @if (Route::has('login'))--}}
-                    {{--                        <div class="user-panel">--}}
-                    {{--                            @auth--}}
-                    {{--                            @else--}}
-                    {{--                                <a href="{{ route('login') }}">Login</a>--}}
-                    {{--                                @if (Route::has('register'))--}}
-                    {{--                                    <a href="{{ route('register') }}">Register</a>--}}
-                    {{--                                @endif--}}
-                    {{--                            @endauth--}}
-                    {{--                        </div>--}}
-                    {{--                    @endif--}}
 
                 </div>
                 <!-- Menu -->
                 <ul class="main-menu primary-menu">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a  href="games.html">Trang chủ</a>
+                        <ul class="sub-menu">
+                            <li><a href="{{route('user.index')}}">Mua bán Game</a></li>
+                            <li><a href="{{route('user.index')}}">Thông tin game</a></li>
+                        </ul></li>
+
                     <li><a href="games.html">Games</a>
                         <ul class="sub-menu">
                             <li><a href="game-single.html">Game Singel</a></li>
@@ -111,9 +73,9 @@
                     </li>
                     <li><a href="review.html">Reviews</a></li>
                     <li><a href="blog.html">News</a></li>
-                    <li><a href="games.html">Admin</a>
+                    <li><a style="color: orangered" href="games.html">Admin</a>
                         <ul class="sub-menu">
-                            <li><a href="{{route('login.index')}}">Tuy cap</a></li>
+                            <li><a style="color: orangered" href="{{route('login.index')}}">Truy cập quyền Admin</a></li>
                         </ul></li>
 
                 </ul>
@@ -129,16 +91,16 @@
     <div class="hero-slider owl-carousel">
         <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{{asset('HTML/img/slider-bg-1.jpg')}}">
             <div class="container">
-                <h2>Game on!</h2>
-                <p>Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor,<br>sit amet elementum lorem. Ut cursus tempor turpis.</p>
-                <a href="#" class="site-btn">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+                <h2>Ps4 Center</h2>
+                <p>Hội tụ những sản phẩm, hệ máy ps4 mới nhất,<br>và những tựa game độc quyền ps4. Sở hữu ngay!</p>
+                <a href="{{route('user.index')}}" class="site-btn">Xem ngay! <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
             </div>
         </div>
         <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{{asset('HTML/img/slider-bg-2.jpg')}}">
             <div class="container">
-                <h2>Game on!</h2>
-                <p>Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor,<br>sit amet elementum lorem. Ut cursus tempor turpis.</p>
-                <a href="#" class="site-btn">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+                <h2>Gaming Center</h2>
+                <p>Cập nhật những thông tin game<br>mới nhất.</p>
+                <a href="#" class="site-btn">Xem ngay!  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
             </div>
         </div>
     </div>
@@ -194,7 +156,12 @@
                     <li><a href="#">Strategy</a></li>
                     <li><a href="#">Online</a></li>
                 </ul>
+
+
                 <!-- Blog item -->
+                <!-- ALERT BLOG HERE, code here-->
+
+
                 <div class="blog-item">
                     <div class="blog-thumb">
                         <img src="{{asset('HTML/img/blog/1.jpg')}}" alt=""> <!-- ./ -->
@@ -287,11 +254,11 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="widget-item">
-                        <a href="#" class="add">
-                            <img src="{{asset('HTML/img/add.jpg')}}" alt="">
-                        </a>
-                    </div>
+{{--                    <div class="widget-item">--}}
+{{--                        <a href="#" class="add">--}}
+{{--                            <img src="{{asset('HTML/img/add.jpg')}}" alt="">--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -305,8 +272,8 @@
     <a href="https://www.youtube.com/watch?v=uFsGy5x_fyQ" class="video-play-btn video-popup"><img src="{{asset('HTML/img/icons/solid-right-arrow.png')}}" alt="#"></a>
     <div class="container">
         <div class="video-text">
-            <h2>Promo video of the game</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h2>Trải nghiệm đồ họa game trên PS4 Pro</h2>
+            <p>Không gì là không thể!</p>
         </div>
     </div>
 </section>

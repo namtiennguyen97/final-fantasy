@@ -22,7 +22,7 @@ class CreateBlogsTable extends Migration
             $table->string('content');
             $table->string('image2')->nullable(true);
             $table->string('image3')->nullable(true);
-            $table->string('video')->nullable(true);
+            $table->string('lastWord')->nullable(true);
             $table->timestamps();
         });
     }
