@@ -35,16 +35,16 @@
                 @foreach($blog as $key => $value)
                     <tr>
                         <th scope="row">{{++$key}}</th>
-                        <td>{{$value->title}}</td>
+                        <td><textarea readonly style="height: 90px; width: 90px">{{$value->title}}</textarea></td>
                         <td>{{$value->game}}</td>
                         <td><img src="{{asset("storage/".$value->headImage)}}" style="width: 90px;height: 90px"> </td>
                         <td><img src="{{asset("storage/".$value->image1)}}" style="width: 90px;height: 90px"> </td>
-                        <td>{{$value->content}}</td>
+                        <td><textarea readonly style="height: 90px">{{$value->content}}</textarea></td>
                         <td><img src="{{asset("storage/".$value->image2)}}" style="width: 90px;height: 90px"> </td>
                         <td><img src="{{asset("storage/".$value->image3)}}" style="width: 90px;height: 90px"> </td>
-                        <td>{{$value->lastWord}}</td>
-                        <td><a href="{{route('blogs.edit',$value->id)}}">Edit</a></td>
-                        <td><a href="{{route('blogs.destroy',$value->id)}}" class="text-danger" onclick="return confirm('Do you want to delete your product?')">Delete</a></td>
+                        <td><textarea readonly style="height: 90px">{{$value->lastWord}}</textarea></td>
+                        <td><a class="btn btn-primary" style="background-color: green" href="{{route('blogs.edit',$value->id)}}">Edit</a></td>
+                        <td><a href="{{route('blogs.destroy',$value->id)}}" class="btn btn-primary" style="background-color: red" onclick="return confirm('Do you want to delete your product?')">Delete</a></td>
                     </tr>
                 @endforeach
             @endif

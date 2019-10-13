@@ -133,28 +133,28 @@
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo1">
                     <i class="fa fa-refresh"></i>
-                    <img src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}" alt="">
+                    <img src="{{asset('ustora/img/fffffff.png')}}" style="height: 100px;width: 90px" alt="">
                     <p>Bảo hành 2 tháng!</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo2">
                     <i class="fa fa-truck"></i>
-                    <img src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}"  alt="">
+                    <img src="{{asset('ustora/img/money.png')}}" style="height: 100px;width: 90px" alt="">
                     <p>Miễn phí ship</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo3">
                     <i class="fa fa-lock"></i>
-                    <img src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}"  alt="">
+                    <img src=" {{asset('ustora/img/card.png')}}" style="height: 100px;width: 90px" alt="">
                     <p>Bảo mật mua Online</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo4">
                     <i class="fa fa-gift"></i>
-                    <img src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}" alt="">
+                    <img style="height: 100px;width: 90px" src="{{asset('ustora/img/ps4_and_ps4_controller_512.png')}}" alt="">
                     <p>Sản phẩm mới</p>
                 </div>
             </div>

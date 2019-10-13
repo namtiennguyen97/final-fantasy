@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <title>EndGam - Gaming Magazine Template</title>
+    <title>Blog</title>
     <meta charset="UTF-8">
     <meta name="description" content="EndGam Gaming Magazine Template">
     <meta name="keywords" content="endGam,gGaming, magazine, html">
@@ -50,23 +50,20 @@
         </div>
         <div class="header-bar-warp d-flex">
             <!-- site logo -->
-            <a href="home.html" class="site-logo">
+            <a href="{{route('webPage')}}" class="site-logo">
                 <img src="{{asset('HTML/img/headee.png')}}" alt="" style="width: 100px;height: 39px"> <!-- ./ -->
             </a>
             <nav class="top-nav-area w-100">
-                <div class="user-panel">
-                    <a href="">Login</a> / <a href="">Register</a>
-                </div>
+
                 <!-- Menu -->
                 <ul class="main-menu primary-menu">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="games.html">Games</a>
+                    <li><a href="{{route('webPage')}}">Home</a></li>
+                    <li><a  href="">Menu</a>
                         <ul class="sub-menu">
-                            <li><a href="game-single.html">Game Singel</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="review.html">Reviews</a></li>
-                    <li><a href="blog.html">News</a></li>
+                            <li><a href="{{route('user.index')}}">Mua bán Game</a></li>
+                            <li><a href="{{route('webPage')}}">Thông tin game</a></li>
+                        </ul></li>
+                    <li><a href="blog.html">Sản phẩm Ps4</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -81,8 +78,8 @@
     <div class="page-info">
         <h2>Blog</h2>
         <div class="site-breadcrumb">
-            <a href="">Home</a>  /
-            <span>Blog</span>
+            <a href="{{route('webPage')}}">Home</a>  /
+            <span>Blog- Tin tức</span>
         </div>
     </div>
 </section>
@@ -195,10 +192,10 @@
 <!-- Newsletter section -->
 <section class="newsletter-section">
     <div class="container">
-        <h2>Subscribe to our newsletter</h2>
+        <h2>Đăng kí nhận thông tin mới nhất</h2>
         <form class="newsletter-form">
-            <input type="text" placeholder="ENTER YOUR E-MAIL">
-            <button class="site-btn">subscribe <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></button>
+            <input type="text" placeholder="Nhập email">
+            <button class="site-btn">Đăng kí <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></button>
         </form>
     </div>
 </section>
@@ -231,7 +228,7 @@
             <a href="#"><i class="fa fa-dribbble"></i></a>
             <a href="#"><i class="fa fa-behance"></i></a>
         </div>
-        <div class="copyright"><a href="">Colorlib</a> 2018 @ All rights reserved</div>
+        <div class="copyright"><a href="">Gaming Ps4</a> 2019 @ All rights reserved to Nam Nguyen</div>
     </div>
 </footer>
 <!-- Footer section end -->

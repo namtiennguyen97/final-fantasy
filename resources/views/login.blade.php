@@ -30,6 +30,7 @@
                        required>
             </div>
             <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            <button style="background-color: orange" class="btn btn-primary"><a href="{{route('webPage')}}">Quay về trang chủ</a></button>
 
         </form>
     </div>

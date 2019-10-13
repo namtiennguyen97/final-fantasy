@@ -35,7 +35,7 @@
                         <td>{{$value->name}}</td>
                         <td>{{$value->price}}</td>
                         <td>{{$value->old_price}}</td>
-                        <td>{{$value->detail}}</td>
+                        <td><textarea readonly style="height: 90px">{{$value->detail}}</textarea></td>
                         <td><img src="{{asset("storage/".$value->image)}}" style="width: 90px;height: 90px"> </td>
                         <td><a class="btn -btn-primary" style="background-color: gold" href="{{route('products.edit', $value->id)}}">Edit</a></td>
                         <td><a href="{{route('products.destroy', $value->id)}}" class="btn btn-primary" style="background-color: red" onclick="return confirm('Do you want to delete your product?')">Delete</a></td>
