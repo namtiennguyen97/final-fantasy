@@ -49,7 +49,7 @@ class BlogController extends Controller
             $path =$image->store('images','public');
             $blog->headImage = $path;
         }
-        elseif ($request->hasFile('image1')){
+        if ($request->hasFile('image1')){
             $image = $request->file('image1');
             $path =$image->store('images','public');
             $blog->image1 = $path;
@@ -57,12 +57,12 @@ class BlogController extends Controller
 //
 
 //
-        elseif ($request->hasFile('image2')){
+        if ($request->hasFile('image2')){
             $image = $request->file('image2');
             $path =$image->store('images','public');
             $blog->image2 = $path;
         }
-        elseif ($request->hasFile('image3')){
+        if ($request->hasFile('image3')){
             $image = $request->file('image3');
             $path =$image->store('images','public');
             $blog->image3 = $path;

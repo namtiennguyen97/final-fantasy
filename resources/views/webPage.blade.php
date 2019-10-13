@@ -169,8 +169,7 @@
                     <div class="blog-text text-box text-white">
                         <div class="top-meta">Đã tạo: {{$value->created_at}} <a href="">Games</a></div>
                         <h3>{{$value->title}}</h3>
-                        <a>Game: {{$value->game}}</a>
-                        <p>read more</p>
+                        <a>Game: {{$value->game}}</a><br>
                         <a href="#" class="read-more">Xem chi tiết  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
                     </div>
                 </div>
@@ -294,13 +293,13 @@
 <footer class="footer-section">
     <div class="container">
         <div class="footer-left-pic">
-            <img src="{{asset('HTML/img/footer-left-pic.png')}}" alt="">
+            <img src="{{asset('HTML/img/gearps4.png')}}" alt="">
         </div>
         <div class="footer-right-pic">
-            <img src="{{asset('HTML/img/footer-right-pic.png')}}" alt="">
+            <img src="{{asset('HTML/img/batman.png')}}" alt="">
         </div>
         <a href="#" class="footer-logo">
-            <img src="{{asset('HTML/img/logo.png')}}" alt="">
+            <img src="{{asset('HTML/img/headee.png')}}" style="width: 100px;height: 39px" alt="">
         </a>
         <ul class="main-menu footer-menu">
             <li><a href="">Home</a></li>
