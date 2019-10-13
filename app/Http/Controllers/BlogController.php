@@ -43,25 +43,26 @@ class BlogController extends Controller
         $blog = new Blog();
         $blog->title = $request->input('title');
         $blog->game = $request->input('game');
+        $blog->content = $request->input('content');
         if ($request->hasFile('headImage')){
             $image = $request->file('headImage');
             $path =$image->store('images','public');
             $blog->headImage = $path;
         }
-        if ($request->hasFile('image1')){
+        elseif ($request->hasFile('image1')){
             $image = $request->file('image1');
             $path =$image->store('images','public');
             $blog->image1 = $path;
         }
+//
 
-        $blog->content = $request->input('content');
-
-        if ($request->hasFile('image2')){
+//
+        elseif ($request->hasFile('image2')){
             $image = $request->file('image2');
             $path =$image->store('images','public');
             $blog->image2 = $path;
         }
-        if ($request->hasFile('image3')){
+        elseif ($request->hasFile('image3')){
             $image = $request->file('image3');
             $path =$image->store('images','public');
             $blog->image3 = $path;
@@ -182,6 +183,12 @@ class BlogController extends Controller
         }
         $blog->delete();
         Session::flash('success','Xóa thành công');
-        return redirect()->route('products.index');
+        return redirect()->route('blogs.index');
+    }
+
+    //show in user
+    public function userBlog(){
+        $blog = Blog::paginate(3);
+        return view('webPage', compact('blog'));
     }
 }

@@ -33,15 +33,15 @@ Route::group(['prefix'=>'blogs'], function (){
    Route::get('/{id}/edit','BLogController@edit')->name('blogs.edit');
    Route::post('/{id}/update','BlogController@update')->name('blogs.update');
    Route::get('/{id}/destroy','BlogController@destroy')->name('blogs.destroy');
+//    Route::get('/page', 'BlogController@userBlog');
+
 });
 
-
+//Route::get('/n', 'BlogController@userBlog');
 
 
 //show san pham cho user
-Route::get('/',function (){
-   return view('webPage');
-})->name('webPage');
+Route::get('/','BlogController@userBlog')->name('webPage');
 
 //page quan ly cua admin
 Route::get('/admin', function (){

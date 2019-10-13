@@ -161,42 +161,21 @@
                 <!-- Blog item -->
                 <!-- ALERT BLOG HERE, code here-->
 
-
+                @foreach($blog as $key => $value)
                 <div class="blog-item">
                     <div class="blog-thumb">
-                        <img src="{{asset('HTML/img/blog/1.jpg')}}" alt=""> <!-- ./ -->
+                        <img src="{{asset("storage/".$value->headImage)}}" style="width: 400px;height: 390px">
                     </div>
                     <div class="blog-text text-box text-white">
-                        <div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
+                        <div class="top-meta">Đã tạo: {{$value->created_at}} <a href="">Games</a></div>
                         <h3>The best online game is out now!</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius-mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consecte-tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
                         <a href="#" class="read-more">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
                     </div>
                 </div>
-                <!-- Blog item -->
-                <div class="blog-item">
-                    <div class="blog-thumb">
-                        <img src="{{asset('HTML/img/blog/2.jpg')}}" alt="">
-                    </div>
-                    <div class="blog-text text-box text-white">
-                        <div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
-                        <h3>The best online game is out now!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius-mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consecte-tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-                        <a href="#" class="read-more">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
-                    </div>
-                </div>
-                <!-- Blog item -->
-                <div class="blog-item">
-                    <div class="blog-thumb">
-                        <img src="{{asset('HTML/img/blog/3.jpg')}}" alt="">
-                    </div>
-                    <div class="blog-text text-box text-white">
-                        <div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
-                        <h3>The best online game is out now!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius-mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consecte-tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-                        <a href="#" class="read-more">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
-                    </div>
-                </div>
+                @endforeach
+<br>
+                {{$blog->links()}}
             </div>
             <div class="col-xl-3 col-lg-4 col-md-5 sidebar">
                 <div id="stickySidebar">

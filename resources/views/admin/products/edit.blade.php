@@ -42,7 +42,7 @@
 
                     <label>Thông tin chi tiết</label>
 
-                    <textarea class="form-control" rows="3" name="detail" value=" {{ $product->detail }} "  required> </textarea>
+                    <textarea class="form-control" rows="3" name="detail"  required>{{ $product->detail }} </textarea>
 
                 </div>
 
@@ -50,7 +50,7 @@
 
                     <label>Image</label>
 
-                    <input type="file" name="image" class="form-control-file" >
+                    <input type="file" name="image" class="form-control-file">
 
                 </div>
 

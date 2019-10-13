@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Cập nhật game')
+@section('title', 'Cập nhật Blog')
 
 
 @section('content')
@@ -12,7 +12,7 @@
 
         <div class="col-md-12">
 
-            <form method="post" action="{{ route('products.edit', $product->id) }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('blogs.edit', $blog->id) }}" enctype="multipart/form-data">
 
                 @csrf
 
@@ -20,15 +20,15 @@
 
                     <label>Tên sản phẩm:</label>
 
-                    <input type="text" class="form-control" name="name" value="{{ $product->name }}" required>
+                    <input type="text" class="form-control" name="name" value="{{ $blog->title }}" required>
 
                 </div>
 
                 <div class="form-group">
 
-                    <label>Giá</label>
+                    <label>Game</label>
 
-                    <input  type="text"  class="form-control" rows="3" name="price" value=" {{ $product->price }}" required>
+                    <input  type="text"  class="form-control" rows="3" name="price" value=" {{ $blog->price }}" required>
 
                 </div>
                 <div class="form-group">

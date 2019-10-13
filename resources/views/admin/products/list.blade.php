@@ -37,14 +37,15 @@
                         <td>{{$value->old_price}}</td>
                         <td>{{$value->detail}}</td>
                         <td><img src="{{asset("storage/".$value->image)}}" style="width: 90px;height: 90px"> </td>
-                        <td><a href="{{route('products.edit', $value->id)}}">Edit</a></td>
-                        <td><a href="{{route('products.destroy', $value->id)}}" class="text-danger" onclick="return confirm('Do you want to delete your product?')">Delete</a></td>
+                        <td><a class="btn -btn-primary" style="background-color: gold" href="{{route('products.edit', $value->id)}}">Edit</a></td>
+                        <td><a href="{{route('products.destroy', $value->id)}}" class="btn btn-primary" style="background-color: red" onclick="return confirm('Do you want to delete your product?')">Delete</a></td>
                     </tr>
                 @endforeach
             @endif
             </tbody>
         </table>
         <a class="btn btn-primary" href="{{route('products.create')}}">Thêm hàng!</a>
+        <a class="btn btn-primary" style="background-color: orange" href="{{route('admin.page')}}">Về danh mục kiểm soát!</a>
         <a class="btn btn-primary" href="{{route('webPage')}}">Home Page</a>
         <a class="btn btn-primary" style="background-color: orange;" href="{{route('user.index')}}">WebShop</a>
         <a class="btn btn-primary" href="{{route('admin.page')}}">Back</a>
