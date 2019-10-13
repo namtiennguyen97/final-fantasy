@@ -19,10 +19,10 @@ class CreateBlogsTable extends Migration
             $table->string('game');
             $table->string('headImage');
             $table->string('image1');
-            $table->string('content');
+            $table->longText('content');
             $table->string('image2')->nullable(true);
             $table->string('image3')->nullable(true);
-            $table->string('lastWord')->nullable(true);
+            $table->longText('lastWord')->nullable(true);
             $table->timestamps();
         });
     }

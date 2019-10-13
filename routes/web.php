@@ -33,13 +33,12 @@ Route::group(['prefix'=>'blogs'], function (){
    Route::get('/{id}/edit','BlogController@edit')->name('blogs.edit');
    Route::post('/{id}/edit','BlogController@update')->name('blogs.update');
    Route::get('/{id}/destroy','BlogController@destroy')->name('blogs.destroy');
+   Route::get('/show/{id}','BlogController@show')->name('blogs.show');
 //    Route::get('/page', 'BlogController@userBlog');
 
 });
 
-Route::get('/nn',function (){
-   return view('user.blog');
-});
+
 
 
 //show san pham cho user

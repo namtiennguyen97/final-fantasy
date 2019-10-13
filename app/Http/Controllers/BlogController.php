@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\Http\Requests\BlogRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
@@ -38,7 +39,7 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BlogRequest $request)
     {
         $blog = new Blog();
         $blog->title = $request->input('title');
@@ -82,6 +83,7 @@ class BlogController extends Controller
     public function show($id)
     {
         $blog = Blog::findOrFail($id);
+        return view('user.blog', compact(['blog']));
 
     }
 
@@ -104,7 +106,7 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BlogRequest $request, $id)
     {
         $blog = Blog::findOrFail($id);
         $blog->title = $request->input('title');
@@ -190,5 +192,9 @@ class BlogController extends Controller
     public function userBlog(){
         $blog = Blog::paginate(3);
         return view('webPage', compact('blog'));
+    }
+    public function detailBlog($id){
+        $blog = Blog::findOrFail($id);
+        return view('user.blog', compact(['blog']));
     }
 }

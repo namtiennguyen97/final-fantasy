@@ -170,7 +170,7 @@
                         <div class="top-meta">Đã tạo: {{$value->created_at}} <a href="">Games</a></div>
                         <h3>{{$value->title}}</h3>
                         <a>Game: {{$value->game}}</a><br>
-                        <a href="#" class="read-more">Xem chi tiết  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+                        <a href="{{route('blogs.show',$value->id)}}" class="read-more">Xem chi tiết  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
 
                     </div>
                 </div>
@@ -269,7 +269,7 @@
             <div class="top-meta">10-10 /  in <a href="">Games</a></div>
             <h3>Sở hữu ngay đĩa game và hệ Ps4 mới nhất!</h3>
             <p>Thế giới game rộng mở đang chờ bạn khám phá, chỉ với một lần bấm, bạn sẽ có thể sở hữu cho mình sản phẩm chính hãng và được tặng kèm một đĩa Horizon:Hero Dawn miễn phí!</p>
-            <a href="#" class="read-more">Mua ngay!  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+            <a href="{{route('user.index')}}" class="read-more">Mua ngay!  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
         </div>
     </div>
 </section>

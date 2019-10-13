@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePs4PackagesTable extends Migration
+class CreateVersionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreatePs4PackagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ps4_packages', function (Blueprint $table) {
+        Schema::create('versions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('detail');
-            $table->integer('price');
-            $table->integer('old_price')->nullable(true);
-            $table->string('image');
+            $table->unsignedBigInteger('ps4_packages_id');
+            $table->foreign('ps4_packages_id')->references('id')->on('ps4_packages');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreatePs4PackagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ps4_packages');
+        Schema::dropIfExists('versions');
     }
 }

@@ -101,12 +101,16 @@
                     <li><a href="#">Online</a></li>
                 </ul>
                 <div class="big-blog-item">
-                    <img src="{{asset('HTML/img/blog-big/1.jpg')}}" alt="#" class="blog-thumbnail">
+                    <img src="{{asset("storage/".$blog->headImage)}}" style="width: 700px;height: 500px">
                     <div class="blog-content text-box text-white">
-                        <div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
-                        <h3>The best VR games on the market</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-                        <a href="#" class="read-more">Read More <img src="img/icons/double-arrow.png" alt="#"/></a>
+                        <div class="top-meta">Thời gian đăng bài: {{$blog->created_at}}/  in <a href="">Games</a></div>
+                        <h3>{{$blog->title}}</h3>
+                        <p>{{$blog->content}}</p>
+                        <img src="{{asset("storage/".$blog->image1)}}" style="width: 700px;height: 500px">
+                        <br>
+                        <p>{{$blog->lastWord}}</p>
+                        <img src="{{asset("storage/".$blog->image3)}}" style="width: 700px;height: 500px">
+                        <img src="{{asset("storage/".$blog->image2)}}" style="width: 700px;height: 500px">
                     </div>
                 </div>
 
@@ -129,7 +133,7 @@
                         <div class="trending-widget">
                             <div class="tw-item">
                                 <div class="tw-thumb">
-                                    <img src="./img/blog-widget/1.jpg" alt="#">
+                                    <img src="{{asset('HTML/img/blog-widget/1.jpg')}}" alt="#">
                                 </div>
                                 <div class="tw-text">
                                     <div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
@@ -138,7 +142,7 @@
                             </div>
                             <div class="tw-item">
                                 <div class="tw-thumb">
-                                    <img src="./img/blog-widget/2.jpg" alt="#">
+                                    <img src="{{asset('HTML/img/blog-widget/2.jpg')}}" alt="#">
                                 </div>
                                 <div class="tw-text">
                                     <div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
@@ -147,7 +151,7 @@
                             </div>
                             <div class="tw-item">
                                 <div class="tw-thumb">
-                                    <img src="./img/blog-widget/3.jpg" alt="#">
+                                    <img src="{{asset('HTML/img/blog-widget/3.jpg')}}" alt="#">
                                 </div>
                                 <div class="tw-text">
                                     <div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
@@ -156,7 +160,7 @@
                             </div>
                             <div class="tw-item">
                                 <div class="tw-thumb">
-                                    <img src="./img/blog-widget/4.jpg" alt="#">
+                                    <img src="{{asset('HTML/img/blog-widget/4.jpg')}}" alt="#">
                                 </div>
                                 <div class="tw-text">
                                     <div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
@@ -179,11 +183,7 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
 
-                    <div class="widget-item">
-                        <a href="#" class="add">
-                            <img src="./img/add.jpg" alt="">
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -198,7 +198,7 @@
         <h2>Subscribe to our newsletter</h2>
         <form class="newsletter-form">
             <input type="text" placeholder="ENTER YOUR E-MAIL">
-            <button class="site-btn">subscribe <img src="img/icons/double-arrow.png" alt="#"/></button>
+            <button class="site-btn">subscribe <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></button>
         </form>
     </div>
 </section>

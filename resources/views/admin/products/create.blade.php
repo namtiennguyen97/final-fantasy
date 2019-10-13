@@ -12,6 +12,9 @@
                 <div class="form-group">
                     <label >Tên sản phẩm</label>
                     <input type="text" class="form-control" name="name" >
+{{--                    @error('name')--}}
+{{--                    <div style="color: red">{{$message}}</div>--}}
+{{--                    @enderror--}}
                 </div>
 
                 <div class="form-group">
