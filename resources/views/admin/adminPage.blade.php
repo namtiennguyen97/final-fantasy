@@ -157,7 +157,7 @@
 {{--                    </div> <!-- .cd-pricing-body -->--}}
 
                     <footer class="cd-pricing-footer">
-                        <a class="cd-select" style="background-color: green" href="">Truy cập</a>
+                        <a class="cd-select" style="background-color: green" href="{{route('packages.index')}}">Truy cập</a>
                     </footer>  <!-- .cd-pricing-footer -->
                 </li>
 

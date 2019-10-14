@@ -12,7 +12,7 @@
 
         <div class="col-md-12">
 
-            <form method="post" action="{{ route('products.edit', $product->id) }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('packages.update', $packages->id) }}" enctype="multipart/form-data">
 
                 @csrf
 
@@ -20,7 +20,7 @@
 
                     <label>Tên sản phẩm:</label>
 
-                    <input type="text" class="form-control" name="name" value="{{ $product->name }}" required>
+                    <input type="text" class="form-control" name="name" value="{{ $packages->name }}" required>
 
                 </div>
 
@@ -28,21 +28,21 @@
 
                     <label>Giá</label>
 
-                    <input  type="text"  class="form-control" rows="3" name="price" value=" {{ $product->price }}" required>
+                    <input  type="text"  class="form-control" rows="3" name="price" value=" {{ $packages->price }}" required>
 
                 </div>
                 <div class="form-group">
 
                     <label>Giá cũ</label>
 
-                    <input  type="text" class="form-control" rows="3" name="old_price" required value="{{ $product->old_price }} " >
+                    <input  type="text" class="form-control" rows="3" name="old_price" required value="{{ $packages->old_price }} " >
 
                 </div>
                 <div class="form-group">
 
                     <label>Thông tin chi tiết</label>
 
-                    <textarea class="form-control" rows="3" name="detail"  required>{{ $product->detail }} </textarea>
+                    <textarea class="form-control" rows="3" name="detail"  required>{{ $packages->detail }} </textarea>
 
                 </div>
 

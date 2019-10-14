@@ -7,14 +7,11 @@
             <h2 style="color: orangered">Thêm sản phẩm</h2>
         </div>
         <div class="col-md-12">
-            <form method="post" action="{{ route('products.store') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('packages.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label >Tên sản phẩm</label>
                     <input type="text" class="form-control" name="name" >
-                    {{--                    @error('name')--}}
-                    {{--                    <div style="color: red">{{$message}}</div>--}}
-                    {{--                    @enderror--}}
                 </div>
 
                 <div class="form-group">

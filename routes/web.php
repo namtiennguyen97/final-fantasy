@@ -24,6 +24,8 @@ Route::group(['prefix'=>'products'], function (){
    Route::post('/{id}/edit','ProductController@update')->name('products.update');
    Route::get('{id}/destroy','ProductController@destroy')->name('products.destroy');
    Route::get('/show/{id}','ProductController@show')->name('show.product');
+    Route::get('/count','ProductController@count')->name('count.product');
+
 });
 
 Route::group(['prefix'=>'blogs'], function (){
@@ -61,7 +63,9 @@ Route::group(['prefix'=>'packages'],function (){
    Route::post('/create','PackageController@store')->name('packages.store');
    Route::get('/{id}/edit','PackageController@edit')->name('packages.edit');
    Route::post('/{id}/edit','PackageController@update')->name('packages.update');
+    Route::post('/{id}/coppy','PackageController@addCoppy')->name('packages.coppy');
    Route::get('/{id}/destroy','PackageController@destroy')->name('packages.destroy');
+
 });
 
 //test

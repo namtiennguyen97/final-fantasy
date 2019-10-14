@@ -37,18 +37,19 @@
                         <td>{{$value->price}}</td>
                         <td>{{$value->old_price}}</td>
                         <td><img src="{{asset("storage/".$value->image)}}" style="width: 90px;height: 90px"> </td>
-                        <td><a class="btn -btn-primary" style="background-color: gold" href="{{route('package.edit', $value->id)}}">Edit</a></td>
-                        <td><a href="{{route('package.destroy', $value->id)}}" class="btn btn-primary" style="background-color: red" onclick="return confirm('Do you want to delete your product?')">Delete</a></td>
+                        <td><a class="btn -btn-primary" style="background-color: gold" href="{{route('packages.edit', $value->id)}}">Edit</a></td>
+                        <td><a href="{{route('packages.destroy', $value->id)}}" class="btn btn-primary" style="background-color: red" onclick="return confirm('Do you want to delete your product?')">Delete</a></td>
                     </tr>
                 @endforeach
             @endif
             </tbody>
         </table>
-        <a class="btn btn-primary" href="{{route('package.create')}}">Thêm hàng!</a>
+        <a class="btn btn-primary" href="{{route('packages.create')}}">Thêm hàng!</a>
         <a class="btn btn-primary" style="background-color: orange" href="{{route('admin.page')}}">Về danh mục kiểm soát!</a>
         <a class="btn btn-primary" href="{{route('webPage')}}">Home Page</a>
         <a class="btn btn-primary" style="background-color: orange;" href="{{route('user.index')}}">WebShop</a>
         <a class="btn btn-primary" href="{{route('admin.page')}}">Back</a>
     </div>
-    {{$product->links()}}
+    {{$package->links()}}
+{{--    {{$product->links()}}--}}
 @endsection

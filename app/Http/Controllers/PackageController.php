@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PackageRequest;
 use App\Ps4Package;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -16,7 +17,7 @@ class PackageController extends Controller
      */
     public function index()
     {
-        $package = Ps4Package::all();
+        $package = Ps4Package::paginate(5);
         return view('admin.packages.list', compact('package'));
     }
 
@@ -36,7 +37,7 @@ class PackageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PackageRequest $request)
     {
         $package = new Ps4Package();
         $package->name = $request->input('name');
@@ -72,8 +73,8 @@ class PackageController extends Controller
      */
     public function edit($id)
     {
-        $package = Ps4Package::findOrFail($id);
-        return view('admin.packages.edit', compact('package'));
+        $packages = Ps4Package::findOrFail($id);
+        return view('admin.packages.edit', compact('packages'));
     }
 
     /**
@@ -83,10 +84,9 @@ class PackageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PackageRequest $request, $id)
     {
         $package = Ps4Package::findOrFail($id);
-        $package = new Ps4Package();
         $package->name = $request->input('name');
         $package->price = $request->input('price');
         $package->old_price= $request->input('old_price');
@@ -103,6 +103,27 @@ class PackageController extends Controller
             $package->save();
             Session::flash('success','Cap nhat thanh cong');
             return redirect()->route('packages.index');
+    }
+
+    public function addCopy(Request $request, $id){
+        $package = Ps4Package::findOrFail($id);
+        $package= new Ps4Package();
+        $package->name = $request->input('name');
+        $package->price = $request->input('price');
+        $package->old_price= $request->input('old_price');
+        $package->detail = $request->input('detail');
+        if ($request->hasFile('image')){
+            $currentImg = $request->image;
+            if ($currentImg){
+                Storage::delete('/public/'. $currentImg);
+            }
+            $image = $request->file('image');
+            $path = $image->store('images','public');
+            $package->image = $path;
+        }
+        $package->save();
+        Session::flash('success','Cap nhat thanh cong');
+        return redirect()->route('packages.index');
     }
 
     /**
