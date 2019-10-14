@@ -60,7 +60,7 @@
                 </div>
                 <!-- Menu -->
                 <ul class="main-menu primary-menu">
-                    <li><a  href="games.html">Trang chủ</a>
+                    <li><a  href="">Trang chủ</a>
                         <ul class="sub-menu">
                             <li><a href="{{route('user.index')}}">Mua bán Game</a></li>
                             <li><a href="{{route('user.index')}}">Thông tin game</a></li>
@@ -170,14 +170,16 @@
                         <div class="top-meta">Đã tạo: {{$value->created_at}} <a href="">Games</a></div>
                         <h3>{{$value->title}}</h3>
                         <a>Game: {{$value->game}}</a><br>
-                        <a href="{{route('blogs.show',$value->id)}}" class="read-more">Xem chi tiết  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+                        <a href="{{route('blogs.show',$value->id)}}" class="site-btn" style="color: #0b0b0b">Xem chi tiết  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+
 
                     </div>
                 </div>
+                    ---
                 @endforeach
 
-<br>
-                {{$blog->links()}}
+
+                <div> {{$blog->links()}}</div>
 
             </div>
             <div class="col-xl-3 col-lg-4 col-md-5 sidebar">
