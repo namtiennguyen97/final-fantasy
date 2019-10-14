@@ -142,6 +142,8 @@ class BlogController extends Controller
             if ($currentImg){
                 Storage::delete('/public/'.$currentImg);
             }
+
+
             //them anh moi sau khi xoa
             $image = $request->file('image2');
             $path = $image->store('images','public');
@@ -196,5 +198,23 @@ class BlogController extends Controller
     public function detailBlog($id){
         $blog = Blog::findOrFail($id);
         return view('user.blog', compact(['blog']));
+    }
+
+    public function showBlog(Request $request)
+    {
+        // Kiểm tra Session login có tồn tại hay không
+        if ($request->session()->has('login') && $request->session()->get('login')) {
+
+            // Session login tồn tại và có giá trị là true, chuyển hướng người dùng đến trang blog
+            return view('admin.adminPage');
+        }
+
+        // Session không tồn tại, người dùng chưa đăng nhập
+        // Gán một thông báo vào Session not-login
+        $message = 'Bạn chưa đăng nhập.';
+        $request->session()->flash('not-login', $message);
+
+        // Chuyển hướng về trang đăng nhập
+        return view('login');
     }
 }

@@ -91,8 +91,8 @@
     <div class="hero-slider owl-carousel">
         <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{{asset('HTML/img/slider-bg-1.jpg')}}">
             <div class="container">
-                <h2>Ps4 Center</h2>
-                <p>Hội tụ những sản phẩm, hệ máy ps4 mới nhất,<br>và những tựa game độc quyền ps4. Sở hữu ngay!</p>
+                <h2 style="color: purple">Ps4 Center</h2>
+                <p style="color: papayawhip">Hội tụ những sản phẩm, hệ máy ps4 mới nhất,<br>và những tựa game độc quyền ps4. Sở hữu ngay!</p>
                 <a href="{{route('user.index')}}" class="site-btn">Xem ngay! <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
             </div>
         </div>
@@ -260,10 +260,9 @@
 </section>
 <!-- Intro section end -->
 
-
 <!-- Featured section -->
 <section class="featured-section">
-    <div class="featured-bg set-bg" data-setbg="{{asset('HTML/img/horizon.gif')}}"></div>
+    <div class="featured-bg set-bg" data-setbg="{{asset('HTML/img/oabqrhb06fcln62ndplu.gif')}}"></div>
     <div class="featured-box">
         <div class="text-box">
             <div class="top-meta">10-10 /  in <a href="">Games</a></div>

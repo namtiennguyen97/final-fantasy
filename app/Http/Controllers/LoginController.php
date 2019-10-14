@@ -13,7 +13,7 @@ class LoginController extends Controller
     {
         $username = $request->inputUsername;
         $password = $request->inputPassword;
-        if ($username == 'nam' && $password == '123456') {
+        if ($username == 'admin' && $password == '123456') {
             $request->session()->push('login', true);
             return redirect()->route('admin.page');
         }

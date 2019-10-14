@@ -147,4 +147,23 @@ class ProductController extends Controller
         $product = Product::table('products')->select('name','price','old_price','detail','image')->get();
         return view('user.index',compact('product'));
     }
+
+    public function ddd(){
+
+        return view('user.test');
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

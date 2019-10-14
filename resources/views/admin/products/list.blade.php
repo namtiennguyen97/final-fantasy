@@ -50,5 +50,8 @@
         <a class="btn btn-primary" style="background-color: orange;" href="{{route('user.index')}}">WebShop</a>
         <a class="btn btn-primary" href="{{route('admin.page')}}">Back</a>
     </div>
+{{--    <a href="{{ route('admin.logout') }}">--}}
+{{--        <button type="button" class="btn btn-outline-primary">Đăng Xuất</button>--}}
+{{--    </a>--}}
 {{$product->links()}}
 @endsection

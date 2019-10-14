@@ -34,6 +34,7 @@ Route::group(['prefix'=>'blogs'], function (){
    Route::post('/{id}/edit','BlogController@update')->name('blogs.update');
    Route::get('/{id}/destroy','BlogController@destroy')->name('blogs.destroy');
    Route::get('/show/{id}','BlogController@show')->name('blogs.show');
+
 //    Route::get('/page', 'BlogController@userBlog');
 
 });
@@ -51,3 +52,23 @@ Route::get('/admin', function (){
 
 Route::get('/login', 'LoginController@showLogin')->name('login.index');
 Route::post('/login', 'LoginController@login');
+
+
+//package
+Route::group(['prefix'=>'packages'],function (){
+   Route::get('/','PackageController@index')->name('packages.index');
+   Route::get('/create','PackageController@create')->name('packages.create');
+   Route::post('/create','PackageController@store')->name('packages.store');
+   Route::get('/{id}/edit','PackageController@edit')->name('packages.edit');
+   Route::post('/{id}/edit','PackageController@update')->name('packages.update');
+   Route::get('/{id}/destroy','PackageController@destroy')->name('packages.destroy');
+});
+
+//test
+Route::get('/test','ProductController@ddd')->name('products.count');
+
+
+
+
+
+
