@@ -48,9 +48,7 @@ Route::group(['prefix'=>'blogs'], function (){
 Route::get('/','BlogController@userBlog')->name('webPage');
 
 //page quan ly cua admin
-Route::get('/admin', function (){
-   return view('admin.adminPage');
-})->name('admin.page');
+Route::get('/admin', 'CompactController@getCompact')->name('admin.page');
 
 Route::get('/login', 'LoginController@showLogin')->name('login.index');
 Route::post('/login', 'LoginController@login');

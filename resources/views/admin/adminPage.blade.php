@@ -69,7 +69,7 @@
 
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
-                            <li><em>512MB</em> Memory</li>
+                            <li><em>Hiện có: {{count($products)}}</em> Sản phẩm</li>
                             <li><em>9</em> Users</li>
                             <li><em>5</em> Websites</li>
                             <li><em>7</em> Domains</li>
@@ -114,7 +114,7 @@
 
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
-                            <li><em>512MB</em> Memory</li>
+                            <li><em>Hiện có: {{count($blogs)}}</em> Bài viết</li>
                             <li><em>3</em> Users</li>
                             <li><em>5</em> Websites</li>
                             <li><em>7</em> Domains</li>
@@ -173,7 +173,7 @@
 
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
-                            <li><em>1024MB</em> Memory</li>
+                            <li><em>Hiện có: {{count($packages)}}</em> Phụ kiện/Dòng máy</li>
                             <li><em>5</em> Users</li>
                             <li><em>10</em> Websites</li>
                             <li><em>10</em> Domains</li>
