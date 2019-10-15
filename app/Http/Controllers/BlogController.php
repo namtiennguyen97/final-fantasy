@@ -194,7 +194,7 @@ class BlogController extends Controller
     //show in user
     public function userBlog(){
         $blog = Blog::paginate(3);
-        $package = Ps4Package::paginate(3);
+        $package = Ps4Package::paginate(4);
         return view('webPage', compact('blog','package'));
     }
     public function detailBlog($id){

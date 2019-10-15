@@ -197,6 +197,7 @@
                                     <div class="tw-meta">Cập nhật ngày: {{$value->created_at}}</div>
                                     <h5>{{$value->name}}</h5>
                                 </div>
+                                <a href="{{route('user.index')}} "> Xem ngay<img src="{{asset('HTML/img/icons/double-arrow.png')}}"></a>
                             </div>
                         </div>
                             ---
