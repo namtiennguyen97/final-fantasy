@@ -218,7 +218,7 @@
                                     <img src="{{asset("storage/".$value->image)}}" style="width: 200px; height: 300px">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
-                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> Chi tiết</a>
+                                        <a href="{{route('packages.show',$value->id)}}" class="view-details-link"><i class="fa fa-link"></i> Chi tiết</a>
                                     </div>
                                 </div>
 

@@ -62,7 +62,7 @@ class PackageController extends Controller
     public function show($id)
     {
         $package = Ps4Package::findOrFail($id);
-        return view('showPack', compact(['package']));
+        return view('user.showPackage', compact(['package']));
     }
 
     /**
