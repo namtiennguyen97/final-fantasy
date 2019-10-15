@@ -184,9 +184,7 @@
                                     <a href="{{route('show.product', $value->id)}}" class="view-details-link"><i class="fa fa-link"></i> Chi tiết</a>
                                 </div>
                             </div>
-
                             <h2><a href="{{route('show.product', $value->id)}}">{{$value->name}}</a></h2>
-
                             <div class="product-carousel-price">
                                 <ins>{{$value->old_price}} VND</ins> <del>{{$value->price}} VND</del>
                             </div>

@@ -72,7 +72,7 @@
                             <li><em>Hiện có: {{count($products)}}</em> Sản phẩm</li>
                             <li><em>9</em> Users</li>
                             <li><em>5</em> Websites</li>
-                            <li><em>7</em> Domains</li>
+                            <li><em>Lần cập nhật:</em>@foreach($products as $key => $value) {{$value->created_at}}    @endforeach</li>
                             {{--                            <li><em>Unlimited</em> Bandwidth</li>--}}
                             {{--                            <li><em>24/7</em> Support</li>--}}
                         </ul>
@@ -117,7 +117,7 @@
                             <li><em>Hiện có: {{count($blogs)}}</em> Bài viết</li>
                             <li><em>3</em> Users</li>
                             <li><em>5</em> Websites</li>
-                            <li><em>7</em> Domains</li>
+                            <li><em>Lần cập nhật:</em>@foreach($blogs as $key => $value) {{$value->created_at}}    @endforeach</li>
 {{--                            <li><em>Unlimited</em> Bandwidth</li>--}}
 {{--                            <li><em>24/7</em> Support</li>--}}
                         </ul>
@@ -175,8 +175,8 @@
                         <ul class="cd-pricing-features">
                             <li><em>Hiện có: {{count($packages)}}</em> Phụ kiện/Dòng máy</li>
                             <li><em>5</em> Users</li>
-                            <li><em>10</em> Websites</li>
-                            <li><em>10</em> Domains</li>
+                            <li><em>10</em> pack</li>
+                            <li><em>Lần cập nhật:</em>@foreach($packages as $key => $value) {{$value->created_at}}    @endforeach</li>
 {{--                            <li><em>Unlimited</em> Bandwidth</li>--}}
 {{--                            <li><em>24/7</em> Support</li>--}}
                         </ul>
