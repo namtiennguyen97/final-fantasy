@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use App\Http\Requests\BlogRequest;
+use App\Ps4Package;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
@@ -193,7 +194,8 @@ class BlogController extends Controller
     //show in user
     public function userBlog(){
         $blog = Blog::paginate(3);
-        return view('webPage', compact('blog'));
+        $package = Ps4Package::paginate(3);
+        return view('webPage', compact('blog','package'));
     }
     public function detailBlog($id){
         $blog = Blog::findOrFail($id);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductRequest;
 use App\Product;
+use App\Ps4Package;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
@@ -24,7 +25,8 @@ class ProductController extends Controller
 
     public function userHome(){
         $product = Product::all();
-        return view('user.index', compact('product'));
+        $package = Ps4Package::all();
+        return view('user.index', compact('product','package'));
     }
     /**
      * Show the form for creating a new resource.

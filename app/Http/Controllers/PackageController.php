@@ -37,7 +37,7 @@ class PackageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PackageRequest $request)
+    public function store(Request $request)
     {
         $package = new Ps4Package();
         $package->name = $request->input('name');
@@ -84,7 +84,7 @@ class PackageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(PackageRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $package = Ps4Package::findOrFail($id);
         $package->name = $request->input('name');
@@ -142,5 +142,11 @@ class PackageController extends Controller
         $package->delete();
         Session::flash('success','Xoa thanh cong');
         return redirect()->route('packages.index');
+    }
+
+    //
+    public function userHome(){
+        $package = Ps4Package::all();
+        return view('user.index', compact('package'));
     }
 }

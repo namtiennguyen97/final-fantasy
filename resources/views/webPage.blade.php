@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link href="{{asset('HTML/img/2bchibi.ico')}}" rel="shortcut icon"/>
-
+    <base href="{{asset('')}}">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
@@ -184,50 +184,29 @@
             </div>
             <div class="col-xl-3 col-lg-4 col-md-5 sidebar">
                 <div id="stickySidebar">
+
                     <div class="widget-item">
-                        <h4 class="widget-title">Trending</h4>
+                        <h4 class="widget-title">Ps4 đang được bày bán!</h4>
+                        @foreach($package as $key => $value)
                         <div class="trending-widget">
                             <div class="tw-item">
                                 <div class="tw-thumb">
-                                    <img src="{{asset('HTML/img/blog-widget/1.jpg')}}" alt="#">
+                                    <img src="{{asset("storage/".$value->image)}}" style="width: 50px;height: 50px">
                                 </div>
                                 <div class="tw-text">
-                                    <div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
-                                    <h5>The best online game is out now!</h5>
-                                </div>
-                            </div>
-                            <div class="tw-item">
-                                <div class="tw-thumb">
-                                    <img src="{{asset('HTML/img/blog-widget/2.jpg')}}" alt="#">
-                                </div>
-                                <div class="tw-text">
-                                    <div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
-                                    <h5>The best online game is out now!</h5>
-                                </div>
-                            </div>
-                            <div class="tw-item">
-                                <div class="tw-thumb">
-                                    <img src="{{asset('HTML/img/blog-widget/3.jpg')}}" alt="#">
-                                </div>
-                                <div class="tw-text">
-                                    <div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
-                                    <h5>The best online game is out now!</h5>
-                                </div>
-                            </div>
-                            <div class="tw-item">
-                                <div class="tw-thumb">
-                                    <img src="{{asset('HTML/img/blog-widget/4.jpg')}}" alt="#">
-                                </div>
-                                <div class="tw-text">
-                                    <div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
-                                    <h5>The best online game is out now!</h5>
+                                    <div class="tw-meta">Cập nhật ngày: {{$value->created_at}}</div>
+                                    <h5>{{$value->name}}</h5>
                                 </div>
                             </div>
                         </div>
+                            ---
+                        @endforeach
                     </div>
+                {{$package->links()}}
+
                     <div class="widget-item">
                         <div class="categories-widget">
-                            <h4 class="widget-title">Danh mục:</h4>
+                            <h4 class="widget-title">Thể loại:</h4>
                             <ul>
                                 <li><a href="">Games</a></li>
                                 <li><a href="">Sản phẩm</a></li>

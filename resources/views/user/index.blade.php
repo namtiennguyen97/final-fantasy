@@ -168,7 +168,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="latest-product">
-                    <h2 style="color: orangered" class="section-title">Danh sách mua bán</h2>
+                    <h2 style="color: orangered" class="section-title"><b>Danh sách mua Ps4 Game/Đĩa bản quyền</b></h2>
                     <form action="{{route('products.search')}}" method="get">
                         @csrf
                         <input type="text" placeholder="Search" name="keyword">
@@ -198,6 +198,47 @@
         </div>
     </div>
 </div> <!-- End main content area -->
+
+<!-- Package -->
+
+<div class="maincontent-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="latest-product">
+                    <h2 style="color: orangered" class="section-title"><b>Danh sách sản phẩm/mua bán hệ máy Ps4 </b></h2>
+{{--                    <form action="{{route('products.search')}}" method="get">--}}
+{{--                        @csrf--}}
+{{--                        <input type="text" placeholder="Search" name="keyword">--}}
+{{--                        <input type="submit" value="Search">--}}
+{{--                    </form>--}}
+                    <div class="product-carousel">
+                        @foreach($package as $key => $value)
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="{{asset("storage/".$value->image)}}" style="width: 200px; height: 300px">
+                                    <div class="product-hover">
+                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
+                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> Chi tiết</a>
+                                    </div>
+                                </div>
+
+                                <h2><a href="{{route('show.product', $value->id)}}">{{$value->name}}</a></h2>
+
+                                <div class="product-carousel-price">
+                                    <ins>{{$value->old_price}} VND</ins> <del>{{$value->price}} VND</del>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End main content area -->
+
+
 
 {{--<div class="brands-area">--}}
 {{--    <div class="zigzag-bottom"></div>--}}

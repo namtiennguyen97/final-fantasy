@@ -66,6 +66,7 @@ Route::group(['prefix'=>'packages'],function (){
     Route::post('/{id}/coppy','PackageController@addCoppy')->name('packages.coppy');
    Route::get('/{id}/destroy','PackageController@destroy')->name('packages.destroy');
 
+
 });
 
 //test
