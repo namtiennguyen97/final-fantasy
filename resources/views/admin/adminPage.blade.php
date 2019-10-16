@@ -71,7 +71,7 @@
                         <ul class="cd-pricing-features">
                             <li><em>Hiện có: {{count($products)}}</em> Sản phẩm</li>
                             <li><em>Hãng Sony:</em> @foreach($publisher as $key => $value) {{count($value->ps4Packages)}} @endforeach</li>
-                            <li><em>Watting</em> for update</li>
+                            <li><em>Hãng Xbox:</em> for update</li>
                             <li><em>Lần cập nhật:</em>@foreach($products as $key => $value) {{$value->created_at}}    @endforeach</li>
                             {{--                            <li><em>Unlimited</em> Bandwidth</li>--}}
                             {{--                            <li><em>24/7</em> Support</li>--}}
