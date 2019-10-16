@@ -5,6 +5,9 @@
         <div class="row-12">
             <h1>Quản lý bài viết</h1>
         </div>
+        <a class="btn btn-primary" style="background-color: green" href="{{route('blogs.create')}}">Thêm bài viết!</a>
+        <a class="btn btn-primary" style="background-color: darkgreen" href="{{route('announment.index')}}">Mục phụ-Thông báo!</a>
+
         <div class="col-12">
             @if(\Illuminate\Support\Facades\Session::has('success'))
                 <p class="text-success">
@@ -50,7 +53,6 @@
             @endif
             </tbody>
         </table>
-        <a class="btn btn-primary" href="{{route('blogs.create')}}">Thêm bài viết!</a>
 
         <a class="btn btn-primary" style="background-color: orange" href="{{route('admin.page')}}">Về danh mục kiểm soát!</a>
         <a class="btn btn-primary" href="{{route('webPage')}}">Home Page</a>

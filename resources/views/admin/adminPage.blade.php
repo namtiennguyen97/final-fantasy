@@ -115,7 +115,7 @@
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
                             <li><em>Hiện có: {{count($blogs)}}</em> Bài viết</li>
-                            <li><em>3</em> Users</li>
+                            <li><em>Hiện có: {{count($claim)}}</em> Thông báo</li>
                             <li><em>5</em> Websites</li>
                             <li><em>Lần cập nhật:</em>@foreach($blogs as $key => $value) {{$value->created_at}}    @endforeach</li>
 {{--                            <li><em>Unlimited</em> Bandwidth</li>--}}

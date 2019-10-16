@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Anounment;
+use App\Http\Requests\AnnounmentRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class AnnounementController extends Controller
 {
@@ -35,11 +37,18 @@ class AnnounementController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AnnounmentRequest $request)
     {
             $claim = new Anounment();
             $claim->title = $request->input('title');
             $claim->content= $request->input('content');
+        //upload file hehe
+        if ($request->hasFile('image')){
+            $image = $request->file('image');
+            $path =$image->store('images','public');
+            $claim->image = $path;
+        }
+        $claim->pop_up =$request->input('pop_up');
             $claim->save();
             Session::flash('success','Thêm mới thành công!');
             return redirect()->route('announment.index');
@@ -76,11 +85,23 @@ class AnnounementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AnnounmentRequest $request, $id)
     {
         $claim = Anounment::findOrFail($id);
         $claim->title = $request->input('title');
         $claim->content = $request->input('content');
+        if ($request->hasFile('image')){
+            //xoa anh cu neu co
+            $currentImg = $claim->image;
+            if ($currentImg){
+                Storage::delete('/public/'.$currentImg);
+            }
+            //them anh moi sau khi xoa
+            $image = $request->file('image');
+            $path = $image->store('images','public');
+            $claim->image = $path;
+        }
+        $claim->pop_up = $request->input('pop_up');
         $claim->save();
         Session::flash('success','Update compeleted!');
         return redirect()->route('announment.index');

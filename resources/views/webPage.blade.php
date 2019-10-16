@@ -112,33 +112,21 @@
 <section class="intro-section">
     <div class="container">
         <div class="row">
+            @foreach($claim as $key=> $value)
             <div class="col-md-4">
                 <div class="intro-text-box text-box text-white">
-                    <div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
-                    <h3>The best online game is out now!</h3>
-                    <p> add text vao day</p>
-                    <a href="#" class="read-more">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
+                    <div class="top-meta">Cập nhật ngày:{{$value->created_at}} <a href="">Games</a></div>
+                    <h3>{{$value->title}}</h3>
+                    <p>{{$value->content}}</p>
+                    <a href="{{route('user.index')}}" class="read-more">Xem ngay! <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                <div class="intro-text-box text-box text-white">
-                    <div class="top-meta">11.11.18  /  in <a href="">Playstation</a></div>
-                    <h3>Top 5 best games in november</h3>
-                    <p>add text vao day</p>
-                    <a href="#" class="read-more">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="intro-text-box text-box text-white">
-                    <div class="top-meta">11.11.18  /  in <a href="">Reviews</a></div>
-                    <h3>Get this game at a promo price</h3>
-                    <p> add text vao day.</p>
-                    <a href="#" class="read-more">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
-                </div>
-            </div>
+            @endforeach
         </div>
+
     </div>
+    <div class="">{{$claim->links()}}</div>
+
 </section>
 <!-- Intro section end -->
 

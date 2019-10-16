@@ -17,6 +17,8 @@ class CreateAnnounmentTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('content');
+            $table->string('image');
+            $table->string('pop_up');
             $table->timestamps();
         });
     }

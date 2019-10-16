@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Anounment;
 use App\Blog;
 use App\Http\Requests\BlogRequest;
 use App\Ps4Package;
@@ -195,7 +196,8 @@ class BlogController extends Controller
     public function userBlog(){
         $blog = Blog::paginate(3);
         $package = Ps4Package::paginate(4);
-        return view('webPage', compact('blog','package'));
+        $claim = Anounment::paginate(3);
+        return view('webPage', compact('blog','package','claim'));
     }
     public function detailBlog($id){
         $blog = Blog::findOrFail($id);

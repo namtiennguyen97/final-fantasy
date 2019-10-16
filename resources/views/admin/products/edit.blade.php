@@ -12,7 +12,7 @@
 
         <div class="col-md-12">
 
-            <form method="post" action="{{ route('products.edit', $product->id) }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('products.update', $product->id) }}" enctype="multipart/form-data">
 
                 @csrf
 
