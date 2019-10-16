@@ -69,10 +69,9 @@ Route::group(['prefix'=>'packages'],function (){
 });
 
 //test
-Route::get('/test','ProductController@ddd')->name('products.count');
 
 
 
-
+Route::get('/test','CategoryController@index')->name('catgories.index');
 
 

@@ -18,6 +18,8 @@
                         <p class="card-text" style="color: red">Giá cũ: {{ $product->old_price }}$</p>
                         <p class="card-text " style="color: darkgreen">Giá mới: {{ $product->price }}$</p>
                         <p class="card-text " style="color: darkred">Thông tin: {{ $product->detail }}</p>
+
+
                         <a href="{{ route('user.index') }}" class="btn btn-primary">< Quay lại </a>
                     </div>
                 </div>
