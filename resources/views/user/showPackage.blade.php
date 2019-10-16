@@ -18,6 +18,8 @@
                         <p class="card-text" style="color: red">Giá cũ: {{ $package->old_price }}$</p>
                         <p class="card-text " style="color: darkgreen">Giá mới: {{ $package->price }}$</p>
                         <p class="card-text " style="color: darkred">Thông tin: {{ $package->detail }}</p>
+                        <p class="card-text" style="color: darkblue">Hãng sản xuất:{{$package->publisher->name}}</p>
+                        <p class="card-text" style="color: darkblue">Phiên bản:{{$package->publisher->version}}</p>
                         <a href="{{ route('user.index') }}" class="btn btn-primary">< Quay lại </a>
                     </div>
                 </div>

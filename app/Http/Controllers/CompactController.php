@@ -6,6 +6,7 @@ use App\Anounment;
 use App\Blog;
 use App\Product;
 use App\Ps4Package;
+use App\Publisher;
 use Illuminate\Http\Request;
 
 class CompactController extends Controller
@@ -15,6 +16,7 @@ class CompactController extends Controller
         $packages = Ps4Package::all();
         $blogs = Blog::all();
         $claim = Anounment::all();
-        return view('admin.adminPage', compact('products','packages','blogs','claim'));
+        $publisher = Publisher::all();
+        return view('admin.adminPage', compact('products','packages','blogs','claim','publisher'));
     }
 }

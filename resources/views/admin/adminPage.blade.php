@@ -70,8 +70,8 @@
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
                             <li><em>Hiện có: {{count($products)}}</em> Sản phẩm</li>
-                            <li><em>9</em> Users</li>
-                            <li><em>5</em> Websites</li>
+                            <li><em>Hãng Sony:</em> @foreach($publisher as $key => $value) {{count($value->ps4Packages)}} @endforeach</li>
+                            <li><em>Watting</em> for update</li>
                             <li><em>Lần cập nhật:</em>@foreach($products as $key => $value) {{$value->created_at}}    @endforeach</li>
                             {{--                            <li><em>Unlimited</em> Bandwidth</li>--}}
                             {{--                            <li><em>24/7</em> Support</li>--}}
@@ -116,7 +116,7 @@
                         <ul class="cd-pricing-features">
                             <li><em>Hiện có: {{count($blogs)}}</em> Bài viết</li>
                             <li><em>Hiện có: {{count($claim)}}</em> Thông báo</li>
-                            <li><em>5</em> Websites</li>
+                            <li><em>Waiting</em> for update</li>
                             <li><em>Lần cập nhật:</em>@foreach($blogs as $key => $value) {{$value->created_at}}    @endforeach</li>
 {{--                            <li><em>Unlimited</em> Bandwidth</li>--}}
 {{--                            <li><em>24/7</em> Support</li>--}}
@@ -174,8 +174,8 @@
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
                             <li><em>Hiện có: {{count($packages)}}</em> Phụ kiện/Dòng máy</li>
-                            <li><em>5</em> Users</li>
-                            <li><em>10</em> pack</li>
+                            <li><em>Waiting</em> for update</li>
+                            <li><em>Waiting</em> for update</li>
                             <li><em>Lần cập nhật:</em>@foreach($packages as $key => $value) {{$value->created_at}}    @endforeach</li>
 {{--                            <li><em>Unlimited</em> Bandwidth</li>--}}
 {{--                            <li><em>24/7</em> Support</li>--}}
