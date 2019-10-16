@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Anounment;
 use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\Ps4Package;
@@ -26,7 +27,8 @@ class ProductController extends Controller
     public function userHome(){
         $product = Product::all();
         $package = Ps4Package::all();
-        return view('user.index', compact('product','package'));
+        $claim = Anounment::all();
+        return view('user.index', compact('product','package','claim'));
     }
     /**
      * Show the form for creating a new resource.
@@ -60,6 +62,7 @@ class ProductController extends Controller
         $product->save();
         return redirect()->route('products.index');
     }
+
 
     /**
      * Display the specified resource.

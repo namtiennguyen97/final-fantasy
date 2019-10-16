@@ -31,4 +31,5 @@ class PackageRequest extends FormRequest
             'image'=>'mimes:jpeg,bmp,png,gif',
         ];
     }
+
 }

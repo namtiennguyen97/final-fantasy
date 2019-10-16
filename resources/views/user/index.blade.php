@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="{{route('webPage')}}"><img src="{{asset('ustora/img/ps4-lodddgo.png')}}" style="width: 90px;height: 40px"></a></h1>
+                    <h1><a href="{{route('webPage')}}"><img src="{{asset('ustora/img/ps4gif.gif')}}" style="width: 140px;height: 70px"></a></h1>
                 </div>
             </div>
 

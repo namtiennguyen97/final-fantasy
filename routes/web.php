@@ -68,10 +68,16 @@ Route::group(['prefix'=>'packages'],function (){
 
 });
 
-//test
+Route::group(['prefix'=>'announment'], function (){
+   Route::get('/','AnnounementController@index')->name('announment.index');
+   Route::get('/create','AnnounementController@create')->name('announment.create');
+   Route::post('/create','AnnounementController@store')->name('announment.store');
+   Route::get('/{id}/edit','AnnounementController@edit')->name('announment.edit');
+   Route::post('/{id}/edit','AnnounementController@update')->name('announment.update');
+   Route::get('/{id}/destroy','AnnounementController@destroy')->name('announment.destroy');
+});
 
 
 
-Route::get('/test','CategoryController@index')->name('catgories.index');
 
 

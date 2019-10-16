@@ -5,6 +5,7 @@
         <div class="row-12">
             <h1>Quản lý sản phẩm</h1>
         </div>
+        <a class="btn btn-primary" style="background-color: green" href="{{route('products.create')}}">Thêm hàng!</a>
         <div class="col-12">
             @if(\Illuminate\Support\Facades\Session::has('success'))
                 <p class="text-success">
@@ -44,7 +45,7 @@
             @endif
             </tbody>
         </table>
-        <a class="btn btn-primary" href="{{route('products.create')}}">Thêm hàng!</a>
+
         <a class="btn btn-primary" style="background-color: orange" href="{{route('admin.page')}}">Về danh mục kiểm soát!</a>
         <a class="btn btn-primary" href="{{route('webPage')}}">Home Page</a>
         <a class="btn btn-primary" style="background-color: orange;" href="{{route('user.index')}}">WebShop</a>

@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Anounment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
-class Announment extends Controller
+class AnnounementController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class Announment extends Controller
      */
     public function index()
     {
-        $announment = Anounment::paginate(5);
-        return view('admin.announment.list', compact('announment'));
+        $claim = Anounment::paginate(5);
+        return view('admin.announment.list', compact('claim'));
     }
 
     /**
@@ -25,7 +26,7 @@ class Announment extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.announment.create');
     }
 
     /**
@@ -36,7 +37,13 @@ class Announment extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $claim = new Anounment();
+            $claim->title = $request->input('title');
+            $claim->content= $request->input('content');
+            $claim->save();
+            Session::flash('success','Thêm mới thành công!');
+            return redirect()->route('announment.index');
+
     }
 
     /**
@@ -58,7 +65,8 @@ class Announment extends Controller
      */
     public function edit($id)
     {
-        //
+        $claim = Anounment::findOrFail($id);
+        return view('admin.announment.edit', compact('claim'));
     }
 
     /**
@@ -70,7 +78,12 @@ class Announment extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $claim = Anounment::findOrFail($id);
+        $claim->title = $request->input('title');
+        $claim->content = $request->input('content');
+        $claim->save();
+        Session::flash('success','Update compeleted!');
+        return redirect()->route('announment.index');
     }
 
     /**
@@ -81,6 +94,8 @@ class Announment extends Controller
      */
     public function destroy($id)
     {
-        //
+        $claim = Anounment::findOrFail($id);
+        $claim->delete();
+        return redirect()->route('announment.index');
     }
 }

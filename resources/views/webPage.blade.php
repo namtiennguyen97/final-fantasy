@@ -120,6 +120,7 @@
                     <a href="#" class="read-more">Read More  <img src="{{asset('HTML/img/icons/double-arrow.png')}}" alt="#"/></a>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="intro-text-box text-box text-white">
                     <div class="top-meta">11.11.18  /  in <a href="">Playstation</a></div>
