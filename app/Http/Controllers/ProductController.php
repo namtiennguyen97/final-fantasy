@@ -129,6 +129,7 @@ class ProductController extends Controller
         if ($image){
             Storage::delete('/public/'.$image);
         }
+        $product->categories()->delete();
         $product->delete();
         Session::flash('success','Xóa thành công');
         return redirect()->route('products.index');

@@ -10,4 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     public $table= 'products';
+    public function categories(){
+        return $this->hasMany('App\Category');
+    }
 }

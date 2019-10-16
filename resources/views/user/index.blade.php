@@ -186,7 +186,7 @@
                             </div>
                             <h2><a href="{{route('show.product', $value->id)}}">{{$value->name}}</a></h2>
                             <div class="product-carousel-price">
-                                <ins>{{number_format($value->old_price)  }} VND</ins> <del>{{number_format($value->price) }} VND</del>
+                                <ins>{{number_format($value->old_price)  }} <a style="color: red">VND</a></ins> <del>{{number_format($value->price) }} VND</del>
                             </div>
                         </div>
                             @endforeach
@@ -225,7 +225,7 @@
                                 <h2><a href="{{route('show.product', $value->id)}}">{{$value->name}}</a></h2>
 
                                 <div class="product-carousel-price">
-                                    <ins>{{ number_format($value->old_price)}} VND</ins> <del>{{number_format($value->price) }} VND</del>
+                                    <ins>{{ number_format($value->old_price)}} <a style="color: red">VND</a></ins> <del>{{number_format($value->price) }} VND</del>
                                 </div>
                             </div>
                         @endforeach
