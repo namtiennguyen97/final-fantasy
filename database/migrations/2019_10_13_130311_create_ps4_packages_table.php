@@ -20,6 +20,8 @@ class CreatePs4PackagesTable extends Migration
             $table->integer('price');
             $table->integer('old_price')->nullable(true);
             $table->string('image');
+            $table->unsignedBigInteger('publisher_id');
+            $table->foreign('publisher_id')->references('id')->on('publisher');
             $table->timestamps();
         });
     }

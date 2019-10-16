@@ -202,11 +202,14 @@
                                 </div>
 
                                 <h2><a href="{{route('show.product', $value->id)}}">{{$value->name}}</a></h2>
+                                <h2 style="color: darkgreen">Phiên bản: {{$value->publisher->version}}</h2>
+                                <h2 style="color: red">Hãng: {{$value->publisher->name}}</h2>
 
                                 <div class="product-carousel-price">
                                     <ins>{{ number_format($value->old_price)}} <a style="color: red">VND</a></ins> <del>{{number_format($value->price) }} VND</del>
                                 </div>
                             </div>
+
                         @endforeach
                     </div>
                 </div>
@@ -253,7 +256,7 @@
                         <a href="facebook.com.vn" target="_blank"><i class="fa fa-facebook"></i></a>
                         <a href="twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
                         <a href="youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
-                        <a href="pornhub.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://fr.pornhub.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>

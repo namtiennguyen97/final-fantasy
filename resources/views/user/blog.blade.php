@@ -105,9 +105,11 @@
                         <p>{{$blog->content}}</p>
                         <img src="{{asset("storage/".$blog->image1)}}" style="width: 700px;height: 500px">
                         <br>
-                        <p>{{$blog->lastWord}}</p>
+
                         <img src="{{asset("storage/".$blog->image3)}}" style="width: 700px;height: 500px">
+                        <p>{{$blog->lastWord}}</p>
                         <img src="{{asset("storage/".$blog->image2)}}" style="width: 700px;height: 500px">
+
                     </div>
                 </div>
 

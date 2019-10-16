@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVersionsTable extends Migration
+class CreatePublisherTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateVersionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('versions', function (Blueprint $table) {
+        Schema::create('publisher', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->unsignedBigInteger('ps4_packages_id');
-            $table->foreign('ps4_packages_id')->references('id')->on('ps4_packages');
+            $table->string('version');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateVersionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('versions');
+        Schema::dropIfExists('publisher');
     }
 }

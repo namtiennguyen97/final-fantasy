@@ -125,7 +125,7 @@
         </div>
 
     </div>
-    <div class="">{{$claim->links()}}</div>
+    <div>{{$claim->links()}}</div>
 
 </section>
 <!-- Intro section end -->

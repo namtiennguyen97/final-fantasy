@@ -6,7 +6,7 @@
             <h1>Quản lý bài viết</h1>
         </div>
         <a class="btn btn-primary" style="background-color: green" href="{{route('blogs.create')}}">Thêm bài viết!</a>
-        <a class="btn btn-primary" style="background-color: darkgreen" href="{{route('announment.index')}}">Mục phụ-Thông báo!</a>
+        <a class="btn btn-primary" style="background-color: rebeccapurple" href="{{route('announment.index')}}">Mục phụ-Thông báo!</a>
 
         <div class="col-12">
             @if(\Illuminate\Support\Facades\Session::has('success'))
