@@ -83,43 +83,20 @@
     <!-- Slider -->
     <div class="block-slider block-slider4">
         <ul class="" id="bxslider-home4">
+            @foreach($claim as $key => $value)
             <li>
-                <img src="{{asset('ustora/img/jud3.jpg')}}" alt="Slide">
+                <img src="{{asset("storage/".$value->image)}}" alt="Slide" style="height: 500px">
                 <div class="caption-group">
                     <h2 class="caption title">
-                        DLC <span class="primary"><strong>Judgement- PS4</strong></span>
+                      <span class="primary"><strong>{{$value->pop_up}}</strong></span>
                     </h2>
                     <h4 class="caption subtitle">PS4</h4>
                     <a class="caption button-radius" href="#"><span class="icon"></span>Xem ngay!</a>
                 </div>
             </li>
-            <li><img src="{{asset('ustora/img/nier2.jpg')}}" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                         <span class="primary" style="color: darkred">Nier Automata giảm giá 50% <strong>+ </strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">Bản edittion</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Mua ngay</a>
-                </div>
-            </li>
-            <li><img src="{{asset('ustora/img/god1.jpg')}}" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                         <span class="primary">DLC <strong>God Of War IX</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">Select Item</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Mua ngay</a>
-                </div>
-            </li>
-            <li><img src="{{asset('ustora/img/nier4.jpg')}}" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        Buy <span class="primary">Sony <strong>Ps4 Pro</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle"><a style="color: darkred">& Razer HeadPhone</a></h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
+            @endforeach
+
+
 
 
         </ul>
